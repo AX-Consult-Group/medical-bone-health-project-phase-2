@@ -49,6 +49,7 @@ From a public health and commercial perspective, these individuals represent a p
 
 ```{r}
 # Reading in data from phase 1
+# Data files are kept in a folder within the project folder called "data" - if replicating do the same for this chunk to run
 phase_1 <- read_xpt("data/poe_bone_health_phase1 - 2026.02.12.xpt")
 ```
 
