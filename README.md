@@ -3,7 +3,8 @@
 
 This repository contains a public, reproducible analysis extending Phase 1 findings to simulate the **clinical and commercial impact** of improved osteoporosis screening and treatment. Using simulated, literature-aligned data, the analysis focuses on modeling outcomes for high-risk individuals—especially those missed under current screening criteria—and estimating downstream commercial potential for a hypothetical therapy, **OsteoGuard**.
 
-insert image
+<img width="1020" height="680" alt="Design Overview Graphic - Phase 2" src="https://github.com/user-attachments/assets/d88c9ec7-bcb4-431b-80a0-e2f5c32d7776" />
+
 
 ---
 
@@ -70,7 +71,7 @@ All simulated datasets are generated within the repository for reproducibility.
 
 The full rendered report will be available via **GitHub Pages**:
 
-insert link
+https://ax-consult-group.github.io/medical-bone-health-project-phase-2/poe_bone_health_phase_2.html
 
 ---
 
