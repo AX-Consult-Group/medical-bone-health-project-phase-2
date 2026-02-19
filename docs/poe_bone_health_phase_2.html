@@ -173,7 +173,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pacman)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">p_load</span>(magrittr, tidyverse, psych, dplyr, ggplot2, haven, janitor, readxl, writexl, knitr, kableExtra, scales, tibble, tidyr, patchwork, ggrepel, zoo)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">p_load</span>(magrittr, tidyverse, psych, dplyr, ggplot2, haven, janitor, readxl, writexl, knitr, kableExtra, scales, tibble, tidyr, patchwork, ggrepel)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <section id="background" class="level3">
@@ -992,46 +992,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Reflects real-world oral bisphosphonate discontinuation (~70% annual retention)."</span>,</span>
 <span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annual growth in market penetration"</span>,</span>
-<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Approx. 5% per year (logistic ramp)"</span>,</span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>  <span class="st">"logistic ramp"</span>,</span>
 <span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Modeled assumption"</span>,</span>
 <span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Aligns with typical treatment adoption curves; incorporates finite pool constraints."</span>,</span>
 <span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Market penetration plateau"</span>,</span>
-<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>  <span class="st">"50% of eligible patients"</span>,</span>
-<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Modeled assumption"</span>,</span>
-<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Consistent with observed maximum penetration for osteoporosis treatments in the US; prevents unrealistic over-adoption."</span>,</span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Customer Acquisition Cost (CAC)"</span>, </span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>  <span class="st">"$100"</span>,</span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Market assumption"</span>,</span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Modeled estimate combining screening, physician engagement, onboarding; reflects typical early adoption cost for a preventive osteoporosis therapy targeting a small high-risk cohort"</span>,</span>
 <span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Customer Acquisition Cost (CAC)"</span>, </span>
-<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a>  <span class="st">"$100"</span>,</span>
-<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Market assumption"</span>,</span>
-<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Modeled estimate combining screening, physician engagement, onboarding; reflects typical early adoption cost for a preventive osteoporosis therapy targeting a small high-risk cohort"</span>,</span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Simulation horizon"</span>,</span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a>  <span class="st">"5 years / 60 months"</span>,</span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Project timeline"</span>,</span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Long enough to capture ramp, plateau, and early profitability dynamics."</span></span>
 <span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Simulation horizon"</span>,</span>
-<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a>  <span class="st">"5 years / 60 months"</span>,</span>
-<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Project timeline"</span>,</span>
-<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Long enough to capture ramp, plateau, and early profitability dynamics."</span></span>
-<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Render table</span></span>
-<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(</span>
-<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a>  commercial_assumptions_tbl,</span>
-<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a>  <span class="at">format =</span> <span class="st">"html"</span>,</span>
-<span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Parameter"</span>, <span class="st">"Assumption"</span>,</span>
-<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Reference"</span>, <span class="st">"Why it's reasonable"</span>),</span>
-<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">"l"</span>,</span>
-<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Commercial assumptions for OsteoGuard market modelling"</span></span>
-<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
-<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(</span>
-<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a>    <span class="at">bootstrap_options =</span> <span class="st">"condensed"</span>,</span>
-<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="st">"left"</span></span>
-<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">row_spec</span>(<span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">background =</span> <span class="st">"#f5f5f5"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">1</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">width =</span> <span class="st">"22em"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">2</span>, <span class="at">width =</span> <span class="st">"14em"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">3</span>, <span class="at">width =</span> <span class="st">"20em"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">4</span>, <span class="at">width =</span> <span class="st">"28em"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Render table</span></span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(</span>
+<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a>  commercial_assumptions_tbl,</span>
+<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a>  <span class="at">format =</span> <span class="st">"html"</span>,</span>
+<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Parameter"</span>, <span class="st">"Assumption"</span>,</span>
+<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Reference"</span>, <span class="st">"Why it's reasonable"</span>),</span>
+<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">"l"</span>,</span>
+<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Commercial assumptions for OsteoGuard market modelling"</span></span>
+<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(</span>
+<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a>    <span class="at">bootstrap_options =</span> <span class="st">"condensed"</span>,</span>
+<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="st">"left"</span></span>
+<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">row_spec</span>(<span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">background =</span> <span class="st">"#f5f5f5"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">1</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">width =</span> <span class="st">"22em"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">2</span>, <span class="at">width =</span> <span class="st">"14em"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">3</span>, <span class="at">width =</span> <span class="st">"20em"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">4</span>, <span class="at">width =</span> <span class="st">"28em"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <table class="table table-condensed caption-top table-sm table-striped small">
@@ -1095,23 +1090,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td style="text-align: left; width: 22em; font-weight: bold;">Annual growth in market penetration</td>
-<td style="text-align: left; width: 14em;">Approx. 5% per year (logistic ramp)</td>
+<td style="text-align: left; width: 14em;">logistic ramp</td>
 <td style="text-align: left; width: 20em;">Modeled assumption</td>
 <td style="text-align: left; width: 28em;">Aligns with typical treatment adoption curves; incorporates finite pool constraints.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left; width: 22em; font-weight: bold;">Market penetration plateau</td>
-<td style="text-align: left; width: 14em;">50% of eligible patients</td>
-<td style="text-align: left; width: 20em;">Modeled assumption</td>
-<td style="text-align: left; width: 28em;">Consistent with observed maximum penetration for osteoporosis treatments in the US; prevents unrealistic over-adoption.</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left; width: 22em; font-weight: bold;">Customer Acquisition Cost (CAC)</td>
 <td style="text-align: left; width: 14em;">$100</td>
 <td style="text-align: left; width: 20em;">Market assumption</td>
 <td style="text-align: left; width: 28em;">Modeled estimate combining screening, physician engagement, onboarding; reflects typical early adoption cost for a preventive osteoporosis therapy targeting a small high-risk cohort</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left; width: 22em; font-weight: bold;">Simulation horizon</td>
 <td style="text-align: left; width: 14em;">5 years / 60 months</td>
 <td style="text-align: left; width: 20em;">Project timeline</td>
@@ -1927,7 +1916,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pacman)</span>
-<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="fu">p_load</span>(magrittr, tidyverse, psych, dplyr, ggplot2, haven, janitor, readxl, writexl, knitr, kableExtra, scales, tibble, tidyr, patchwork, ggrepel, zoo)</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="fu">p_load</span>(magrittr, tidyverse, psych, dplyr, ggplot2, haven, janitor, readxl, writexl, knitr, kableExtra, scales, tibble, tidyr, patchwork, ggrepel)</span>
 <span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a><span class="fu">### Background</span></span>
@@ -2499,276 +2488,271 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-611"><a href="#cb17-611" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Reflects real-world oral bisphosphonate discontinuation (~70% annual retention)."</span>,</span>
 <span id="cb17-612"><a href="#cb17-612" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb17-613"><a href="#cb17-613" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Annual growth in market penetration"</span>,</span>
-<span id="cb17-614"><a href="#cb17-614" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Approx. 5% per year (logistic ramp)"</span>,</span>
+<span id="cb17-614"><a href="#cb17-614" aria-hidden="true" tabindex="-1"></a>  <span class="st">"logistic ramp"</span>,</span>
 <span id="cb17-615"><a href="#cb17-615" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Modeled assumption"</span>,</span>
 <span id="cb17-616"><a href="#cb17-616" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Aligns with typical treatment adoption curves; incorporates finite pool constraints."</span>,</span>
 <span id="cb17-617"><a href="#cb17-617" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-618"><a href="#cb17-618" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Market penetration plateau"</span>,</span>
-<span id="cb17-619"><a href="#cb17-619" aria-hidden="true" tabindex="-1"></a>  <span class="st">"50% of eligible patients"</span>,</span>
-<span id="cb17-620"><a href="#cb17-620" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Modeled assumption"</span>,</span>
-<span id="cb17-621"><a href="#cb17-621" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Consistent with observed maximum penetration for osteoporosis treatments in the US; prevents unrealistic over-adoption."</span>,</span>
+<span id="cb17-618"><a href="#cb17-618" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Customer Acquisition Cost (CAC)"</span>, </span>
+<span id="cb17-619"><a href="#cb17-619" aria-hidden="true" tabindex="-1"></a>  <span class="st">"$100"</span>,</span>
+<span id="cb17-620"><a href="#cb17-620" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Market assumption"</span>,</span>
+<span id="cb17-621"><a href="#cb17-621" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Modeled estimate combining screening, physician engagement, onboarding; reflects typical early adoption cost for a preventive osteoporosis therapy targeting a small high-risk cohort"</span>,</span>
 <span id="cb17-622"><a href="#cb17-622" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-623"><a href="#cb17-623" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Customer Acquisition Cost (CAC)"</span>, </span>
-<span id="cb17-624"><a href="#cb17-624" aria-hidden="true" tabindex="-1"></a>  <span class="st">"$100"</span>,</span>
-<span id="cb17-625"><a href="#cb17-625" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Market assumption"</span>,</span>
-<span id="cb17-626"><a href="#cb17-626" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Modeled estimate combining screening, physician engagement, onboarding; reflects typical early adoption cost for a preventive osteoporosis therapy targeting a small high-risk cohort"</span>,</span>
+<span id="cb17-623"><a href="#cb17-623" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Simulation horizon"</span>,</span>
+<span id="cb17-624"><a href="#cb17-624" aria-hidden="true" tabindex="-1"></a>  <span class="st">"5 years / 60 months"</span>,</span>
+<span id="cb17-625"><a href="#cb17-625" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Project timeline"</span>,</span>
+<span id="cb17-626"><a href="#cb17-626" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Long enough to capture ramp, plateau, and early profitability dynamics."</span></span>
 <span id="cb17-627"><a href="#cb17-627" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-628"><a href="#cb17-628" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Simulation horizon"</span>,</span>
-<span id="cb17-629"><a href="#cb17-629" aria-hidden="true" tabindex="-1"></a>  <span class="st">"5 years / 60 months"</span>,</span>
-<span id="cb17-630"><a href="#cb17-630" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Project timeline"</span>,</span>
-<span id="cb17-631"><a href="#cb17-631" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Long enough to capture ramp, plateau, and early profitability dynamics."</span></span>
-<span id="cb17-632"><a href="#cb17-632" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-633"><a href="#cb17-633" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb17-634"><a href="#cb17-634" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-635"><a href="#cb17-635" aria-hidden="true" tabindex="-1"></a><span class="co"># Render table</span></span>
-<span id="cb17-636"><a href="#cb17-636" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(</span>
-<span id="cb17-637"><a href="#cb17-637" aria-hidden="true" tabindex="-1"></a>  commercial_assumptions_tbl,</span>
-<span id="cb17-638"><a href="#cb17-638" aria-hidden="true" tabindex="-1"></a>  <span class="at">format =</span> <span class="st">"html"</span>,</span>
-<span id="cb17-639"><a href="#cb17-639" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Parameter"</span>, <span class="st">"Assumption"</span>,</span>
-<span id="cb17-640"><a href="#cb17-640" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Reference"</span>, <span class="st">"Why it's reasonable"</span>),</span>
-<span id="cb17-641"><a href="#cb17-641" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">"l"</span>,</span>
-<span id="cb17-642"><a href="#cb17-642" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Commercial assumptions for OsteoGuard market modelling"</span></span>
-<span id="cb17-643"><a href="#cb17-643" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
-<span id="cb17-644"><a href="#cb17-644" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(</span>
-<span id="cb17-645"><a href="#cb17-645" aria-hidden="true" tabindex="-1"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb17-646"><a href="#cb17-646" aria-hidden="true" tabindex="-1"></a>    <span class="at">bootstrap_options =</span> <span class="st">"condensed"</span>,</span>
-<span id="cb17-647"><a href="#cb17-647" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="st">"left"</span></span>
-<span id="cb17-648"><a href="#cb17-648" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb17-649"><a href="#cb17-649" aria-hidden="true" tabindex="-1"></a>  <span class="fu">row_spec</span>(<span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">background =</span> <span class="st">"#f5f5f5"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb17-650"><a href="#cb17-650" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">1</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">width =</span> <span class="st">"22em"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb17-651"><a href="#cb17-651" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">2</span>, <span class="at">width =</span> <span class="st">"14em"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb17-652"><a href="#cb17-652" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">3</span>, <span class="at">width =</span> <span class="st">"20em"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb17-653"><a href="#cb17-653" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">4</span>, <span class="at">width =</span> <span class="st">"28em"</span>)</span>
+<span id="cb17-628"><a href="#cb17-628" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-629"><a href="#cb17-629" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-630"><a href="#cb17-630" aria-hidden="true" tabindex="-1"></a><span class="co"># Render table</span></span>
+<span id="cb17-631"><a href="#cb17-631" aria-hidden="true" tabindex="-1"></a><span class="fu">kbl</span>(</span>
+<span id="cb17-632"><a href="#cb17-632" aria-hidden="true" tabindex="-1"></a>  commercial_assumptions_tbl,</span>
+<span id="cb17-633"><a href="#cb17-633" aria-hidden="true" tabindex="-1"></a>  <span class="at">format =</span> <span class="st">"html"</span>,</span>
+<span id="cb17-634"><a href="#cb17-634" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Parameter"</span>, <span class="st">"Assumption"</span>,</span>
+<span id="cb17-635"><a href="#cb17-635" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Reference"</span>, <span class="st">"Why it's reasonable"</span>),</span>
+<span id="cb17-636"><a href="#cb17-636" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">"l"</span>,</span>
+<span id="cb17-637"><a href="#cb17-637" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Commercial assumptions for OsteoGuard market modelling"</span></span>
+<span id="cb17-638"><a href="#cb17-638" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-639"><a href="#cb17-639" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(</span>
+<span id="cb17-640"><a href="#cb17-640" aria-hidden="true" tabindex="-1"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb17-641"><a href="#cb17-641" aria-hidden="true" tabindex="-1"></a>    <span class="at">bootstrap_options =</span> <span class="st">"condensed"</span>,</span>
+<span id="cb17-642"><a href="#cb17-642" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="st">"left"</span></span>
+<span id="cb17-643"><a href="#cb17-643" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb17-644"><a href="#cb17-644" aria-hidden="true" tabindex="-1"></a>  <span class="fu">row_spec</span>(<span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">background =</span> <span class="st">"#f5f5f5"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-645"><a href="#cb17-645" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">1</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">width =</span> <span class="st">"22em"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-646"><a href="#cb17-646" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">2</span>, <span class="at">width =</span> <span class="st">"14em"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-647"><a href="#cb17-647" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">3</span>, <span class="at">width =</span> <span class="st">"20em"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-648"><a href="#cb17-648" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">4</span>, <span class="at">width =</span> <span class="st">"28em"</span>)</span>
+<span id="cb17-649"><a href="#cb17-649" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-650"><a href="#cb17-650" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-651"><a href="#cb17-651" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-652"><a href="#cb17-652" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-653"><a href="#cb17-653" aria-hidden="true" tabindex="-1"></a>The commercial simulation projects patient uptake, market penetration, and financial outcomes for a hypothetical oral weekly bisphosphonate targeting high-risk, unscreened U.S. adults. The model scales from the estimated 38 million adults aged ≥20 who are currently high-risk but not captured under existing age-based screening criteria, of which approximately 50% are realistically treatable (~19 million). </span>
 <span id="cb17-654"><a href="#cb17-654" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-655"><a href="#cb17-655" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-655"><a href="#cb17-655" aria-hidden="true" tabindex="-1"></a>Monthly patient starts are initialized at 10,000, reflecting a conservative early adoption launch, and new patient uptake is modeled as a fraction of the remaining untreated pool (0.8% per month), adjusted for the drug’s logistic market share ramp from 8% to 20% over 5 years. Active patients are updated monthly using a persistence factor of 97% per month (~70% annual retention), reflecting real-world discontinuation rates for oral bisphosphonates. Revenue is calculated as active patients multiplied by the monthly treatment price ($10.49), while costs combine manufacturing ($1.04 per patient per month) and one-time customer acquisition costs ($100 per new patient). The simulation horizon is 5 years, and adoption is assumed to increase gradually before plateauing at 50% of the eligible treatable population. This approach provides a data-driven estimate of the addressable market, demonstrating how expanded screening and optimized treatment adoption could translate into measurable economic impact over a realistic commercial rollout period.</span>
 <span id="cb17-656"><a href="#cb17-656" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-657"><a href="#cb17-657" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-658"><a href="#cb17-658" aria-hidden="true" tabindex="-1"></a>The commercial simulation projects patient uptake, market penetration, and financial outcomes for a hypothetical oral weekly bisphosphonate targeting high-risk, unscreened U.S. adults. The model scales from the estimated 38 million adults aged ≥20 who are currently high-risk but not captured under existing age-based screening criteria, of which approximately 50% are realistically treatable (~19 million). </span>
-<span id="cb17-659"><a href="#cb17-659" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-660"><a href="#cb17-660" aria-hidden="true" tabindex="-1"></a>Monthly patient starts are initialized at 10,000, reflecting a conservative early adoption launch, and new patient uptake is modeled as a fraction of the remaining untreated pool (0.8% per month), adjusted for the drug’s logistic market share ramp from 8% to 20% over 5 years. Active patients are updated monthly using a persistence factor of 97% per month (~70% annual retention), reflecting real-world discontinuation rates for oral bisphosphonates. Revenue is calculated as active patients multiplied by the monthly treatment price ($10.49), while costs combine manufacturing ($1.04 per patient per month) and one-time customer acquisition costs ($100 per new patient). The simulation horizon is 5 years, and adoption is assumed to increase gradually before plateauing at 50% of the eligible treatable population. This approach provides a data-driven estimate of the addressable market, demonstrating how expanded screening and optimized treatment adoption could translate into measurable economic impact over a realistic commercial rollout period.</span>
+<span id="cb17-659"><a href="#cb17-659" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb17-660"><a href="#cb17-660" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulating commercial dataset</span></span>
 <span id="cb17-661"><a href="#cb17-661" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-664"><a href="#cb17-664" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb17-665"><a href="#cb17-665" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulating commercial dataset</span></span>
-<span id="cb17-666"><a href="#cb17-666" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-667"><a href="#cb17-667" aria-hidden="true" tabindex="-1"></a><span class="co"># Inputs</span></span>
-<span id="cb17-668"><a href="#cb17-668" aria-hidden="true" tabindex="-1"></a>months <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">60</span>                    <span class="co"># 5 years</span></span>
-<span id="cb17-669"><a href="#cb17-669" aria-hidden="true" tabindex="-1"></a>addressable_pool <span class="ot">&lt;-</span> <span class="fl">0.5</span><span class="sc">*</span><span class="dv">38000000</span>  <span class="co"># 50% of 38M</span></span>
-<span id="cb17-670"><a href="#cb17-670" aria-hidden="true" tabindex="-1"></a>start_patients <span class="ot">&lt;-</span> <span class="dv">10000</span>           <span class="co"># assumption of realistic starting point</span></span>
-<span id="cb17-671"><a href="#cb17-671" aria-hidden="true" tabindex="-1"></a>monthly_conversion <span class="ot">&lt;-</span> <span class="fl">0.008</span>       <span class="co"># 0.8% of untreated pool per month</span></span>
-<span id="cb17-672"><a href="#cb17-672" aria-hidden="true" tabindex="-1"></a>initial_share <span class="ot">&lt;-</span> <span class="fl">0.08</span></span>
-<span id="cb17-673"><a href="#cb17-673" aria-hidden="true" tabindex="-1"></a>max_share <span class="ot">&lt;-</span> <span class="fl">0.20</span></span>
-<span id="cb17-674"><a href="#cb17-674" aria-hidden="true" tabindex="-1"></a>share_ramp_speed <span class="ot">&lt;-</span> <span class="fl">0.06</span>           <span class="co"># logistic ramp</span></span>
-<span id="cb17-675"><a href="#cb17-675" aria-hidden="true" tabindex="-1"></a>monthly_persistence <span class="ot">&lt;-</span> <span class="fl">0.97</span>       <span class="co"># ~70% annual</span></span>
-<span id="cb17-676"><a href="#cb17-676" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-677"><a href="#cb17-677" aria-hidden="true" tabindex="-1"></a>price_per_month <span class="ot">&lt;-</span> <span class="fl">10.49</span></span>
-<span id="cb17-678"><a href="#cb17-678" aria-hidden="true" tabindex="-1"></a>costprice_per_month <span class="ot">&lt;-</span> <span class="fl">1.04</span></span>
-<span id="cb17-679"><a href="#cb17-679" aria-hidden="true" tabindex="-1"></a>CAC <span class="ot">&lt;-</span> <span class="dv">100</span></span>
-<span id="cb17-680"><a href="#cb17-680" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-681"><a href="#cb17-681" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize dataframe</span></span>
-<span id="cb17-682"><a href="#cb17-682" aria-hidden="true" tabindex="-1"></a>commercial_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">month =</span> months) <span class="sc">%&gt;%</span></span>
-<span id="cb17-683"><a href="#cb17-683" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb17-684"><a href="#cb17-684" aria-hidden="true" tabindex="-1"></a>    <span class="at">market_share =</span> max_share <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="sc">-</span>share_ramp_speed <span class="sc">*</span> (month <span class="sc">-</span> <span class="dv">18</span>))),</span>
-<span id="cb17-685"><a href="#cb17-685" aria-hidden="true" tabindex="-1"></a>    <span class="at">untreated_pool =</span> <span class="cn">NA</span>,</span>
-<span id="cb17-686"><a href="#cb17-686" aria-hidden="true" tabindex="-1"></a>    <span class="at">new_patients =</span> <span class="cn">NA</span>,</span>
-<span id="cb17-687"><a href="#cb17-687" aria-hidden="true" tabindex="-1"></a>    <span class="at">active_patients =</span> <span class="cn">NA</span></span>
-<span id="cb17-688"><a href="#cb17-688" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb17-689"><a href="#cb17-689" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-690"><a href="#cb17-690" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulation loop</span></span>
-<span id="cb17-691"><a href="#cb17-691" aria-hidden="true" tabindex="-1"></a>untreated <span class="ot">&lt;-</span> addressable_pool</span>
-<span id="cb17-692"><a href="#cb17-692" aria-hidden="true" tabindex="-1"></a>active <span class="ot">&lt;-</span> start_patients</span>
-<span id="cb17-693"><a href="#cb17-693" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-694"><a href="#cb17-694" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (m <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(commercial_df)) {</span>
-<span id="cb17-695"><a href="#cb17-695" aria-hidden="true" tabindex="-1"></a>  share <span class="ot">&lt;-</span> commercial_df<span class="sc">$</span>market_share[m]</span>
-<span id="cb17-696"><a href="#cb17-696" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-697"><a href="#cb17-697" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Total new treated patients in the market this month</span></span>
-<span id="cb17-698"><a href="#cb17-698" aria-hidden="true" tabindex="-1"></a>  total_new_market <span class="ot">&lt;-</span> untreated <span class="sc">*</span> monthly_conversion</span>
-<span id="cb17-699"><a href="#cb17-699" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-700"><a href="#cb17-700" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Patients captured by our drug</span></span>
-<span id="cb17-701"><a href="#cb17-701" aria-hidden="true" tabindex="-1"></a>  new_pts <span class="ot">&lt;-</span> total_new_market <span class="sc">*</span> share</span>
-<span id="cb17-702"><a href="#cb17-702" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-703"><a href="#cb17-703" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Update active patients with attrition</span></span>
-<span id="cb17-704"><a href="#cb17-704" aria-hidden="true" tabindex="-1"></a>  active <span class="ot">&lt;-</span> active <span class="sc">*</span> monthly_persistence <span class="sc">+</span> new_pts</span>
-<span id="cb17-705"><a href="#cb17-705" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-706"><a href="#cb17-706" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Update untreated pool</span></span>
-<span id="cb17-707"><a href="#cb17-707" aria-hidden="true" tabindex="-1"></a>  untreated <span class="ot">&lt;-</span> untreated <span class="sc">-</span> total_new_market</span>
-<span id="cb17-708"><a href="#cb17-708" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-709"><a href="#cb17-709" aria-hidden="true" tabindex="-1"></a>  commercial_df<span class="sc">$</span>new_patients[m] <span class="ot">&lt;-</span> new_pts</span>
-<span id="cb17-710"><a href="#cb17-710" aria-hidden="true" tabindex="-1"></a>  commercial_df<span class="sc">$</span>active_patients[m] <span class="ot">&lt;-</span> active</span>
-<span id="cb17-711"><a href="#cb17-711" aria-hidden="true" tabindex="-1"></a>  commercial_df<span class="sc">$</span>untreated_pool[m] <span class="ot">&lt;-</span> untreated</span>
-<span id="cb17-712"><a href="#cb17-712" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb17-713"><a href="#cb17-713" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-714"><a href="#cb17-714" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate revenue, cost, profit</span></span>
-<span id="cb17-715"><a href="#cb17-715" aria-hidden="true" tabindex="-1"></a>commercial_df <span class="ot">&lt;-</span> commercial_df <span class="sc">%&gt;%</span></span>
-<span id="cb17-716"><a href="#cb17-716" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb17-717"><a href="#cb17-717" aria-hidden="true" tabindex="-1"></a>    <span class="at">revenue =</span> active_patients <span class="sc">*</span> price_per_month,</span>
-<span id="cb17-718"><a href="#cb17-718" aria-hidden="true" tabindex="-1"></a>    <span class="at">cost =</span> (active_patients <span class="sc">*</span> costprice_per_month) <span class="sc">+</span> (new_patients <span class="sc">*</span> CAC),</span>
-<span id="cb17-719"><a href="#cb17-719" aria-hidden="true" tabindex="-1"></a>    <span class="at">profit =</span> revenue <span class="sc">-</span> cost</span>
-<span id="cb17-720"><a href="#cb17-720" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb17-721"><a href="#cb17-721" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-662"><a href="#cb17-662" aria-hidden="true" tabindex="-1"></a><span class="co"># Inputs</span></span>
+<span id="cb17-663"><a href="#cb17-663" aria-hidden="true" tabindex="-1"></a>months <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">60</span>                    <span class="co"># 5 years</span></span>
+<span id="cb17-664"><a href="#cb17-664" aria-hidden="true" tabindex="-1"></a>addressable_pool <span class="ot">&lt;-</span> <span class="fl">0.5</span><span class="sc">*</span><span class="dv">38000000</span>  <span class="co"># 50% of 38M</span></span>
+<span id="cb17-665"><a href="#cb17-665" aria-hidden="true" tabindex="-1"></a>start_patients <span class="ot">&lt;-</span> <span class="dv">10000</span>           <span class="co"># assumption of realistic starting point</span></span>
+<span id="cb17-666"><a href="#cb17-666" aria-hidden="true" tabindex="-1"></a>monthly_conversion <span class="ot">&lt;-</span> <span class="fl">0.008</span>       <span class="co"># 0.8% of untreated pool per month</span></span>
+<span id="cb17-667"><a href="#cb17-667" aria-hidden="true" tabindex="-1"></a>initial_share <span class="ot">&lt;-</span> <span class="fl">0.08</span></span>
+<span id="cb17-668"><a href="#cb17-668" aria-hidden="true" tabindex="-1"></a>max_share <span class="ot">&lt;-</span> <span class="fl">0.20</span></span>
+<span id="cb17-669"><a href="#cb17-669" aria-hidden="true" tabindex="-1"></a>share_ramp_speed <span class="ot">&lt;-</span> <span class="fl">0.06</span>           <span class="co"># logistic ramp</span></span>
+<span id="cb17-670"><a href="#cb17-670" aria-hidden="true" tabindex="-1"></a>monthly_persistence <span class="ot">&lt;-</span> <span class="fl">0.97</span>       <span class="co"># ~70% annual</span></span>
+<span id="cb17-671"><a href="#cb17-671" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-672"><a href="#cb17-672" aria-hidden="true" tabindex="-1"></a>price_per_month <span class="ot">&lt;-</span> <span class="fl">10.49</span></span>
+<span id="cb17-673"><a href="#cb17-673" aria-hidden="true" tabindex="-1"></a>costprice_per_month <span class="ot">&lt;-</span> <span class="fl">1.04</span></span>
+<span id="cb17-674"><a href="#cb17-674" aria-hidden="true" tabindex="-1"></a>CAC <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb17-675"><a href="#cb17-675" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-676"><a href="#cb17-676" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize dataframe</span></span>
+<span id="cb17-677"><a href="#cb17-677" aria-hidden="true" tabindex="-1"></a>commercial_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">month =</span> months) <span class="sc">%&gt;%</span></span>
+<span id="cb17-678"><a href="#cb17-678" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb17-679"><a href="#cb17-679" aria-hidden="true" tabindex="-1"></a>    <span class="at">market_share =</span> max_share <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="sc">-</span>share_ramp_speed <span class="sc">*</span> (month <span class="sc">-</span> <span class="dv">18</span>))),</span>
+<span id="cb17-680"><a href="#cb17-680" aria-hidden="true" tabindex="-1"></a>    <span class="at">untreated_pool =</span> <span class="cn">NA</span>,</span>
+<span id="cb17-681"><a href="#cb17-681" aria-hidden="true" tabindex="-1"></a>    <span class="at">new_patients =</span> <span class="cn">NA</span>,</span>
+<span id="cb17-682"><a href="#cb17-682" aria-hidden="true" tabindex="-1"></a>    <span class="at">active_patients =</span> <span class="cn">NA</span></span>
+<span id="cb17-683"><a href="#cb17-683" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb17-684"><a href="#cb17-684" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-685"><a href="#cb17-685" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulation loop</span></span>
+<span id="cb17-686"><a href="#cb17-686" aria-hidden="true" tabindex="-1"></a>untreated <span class="ot">&lt;-</span> addressable_pool</span>
+<span id="cb17-687"><a href="#cb17-687" aria-hidden="true" tabindex="-1"></a>active <span class="ot">&lt;-</span> start_patients</span>
+<span id="cb17-688"><a href="#cb17-688" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-689"><a href="#cb17-689" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (m <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(commercial_df)) {</span>
+<span id="cb17-690"><a href="#cb17-690" aria-hidden="true" tabindex="-1"></a>  share <span class="ot">&lt;-</span> commercial_df<span class="sc">$</span>market_share[m]</span>
+<span id="cb17-691"><a href="#cb17-691" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-692"><a href="#cb17-692" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Total new treated patients in the market this month</span></span>
+<span id="cb17-693"><a href="#cb17-693" aria-hidden="true" tabindex="-1"></a>  total_new_market <span class="ot">&lt;-</span> untreated <span class="sc">*</span> monthly_conversion</span>
+<span id="cb17-694"><a href="#cb17-694" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-695"><a href="#cb17-695" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Patients captured by our drug</span></span>
+<span id="cb17-696"><a href="#cb17-696" aria-hidden="true" tabindex="-1"></a>  new_pts <span class="ot">&lt;-</span> total_new_market <span class="sc">*</span> share</span>
+<span id="cb17-697"><a href="#cb17-697" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-698"><a href="#cb17-698" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Update active patients with attrition</span></span>
+<span id="cb17-699"><a href="#cb17-699" aria-hidden="true" tabindex="-1"></a>  active <span class="ot">&lt;-</span> active <span class="sc">*</span> monthly_persistence <span class="sc">+</span> new_pts</span>
+<span id="cb17-700"><a href="#cb17-700" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-701"><a href="#cb17-701" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Update untreated pool</span></span>
+<span id="cb17-702"><a href="#cb17-702" aria-hidden="true" tabindex="-1"></a>  untreated <span class="ot">&lt;-</span> untreated <span class="sc">-</span> total_new_market</span>
+<span id="cb17-703"><a href="#cb17-703" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-704"><a href="#cb17-704" aria-hidden="true" tabindex="-1"></a>  commercial_df<span class="sc">$</span>new_patients[m] <span class="ot">&lt;-</span> new_pts</span>
+<span id="cb17-705"><a href="#cb17-705" aria-hidden="true" tabindex="-1"></a>  commercial_df<span class="sc">$</span>active_patients[m] <span class="ot">&lt;-</span> active</span>
+<span id="cb17-706"><a href="#cb17-706" aria-hidden="true" tabindex="-1"></a>  commercial_df<span class="sc">$</span>untreated_pool[m] <span class="ot">&lt;-</span> untreated</span>
+<span id="cb17-707"><a href="#cb17-707" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb17-708"><a href="#cb17-708" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-709"><a href="#cb17-709" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate revenue, cost, profit</span></span>
+<span id="cb17-710"><a href="#cb17-710" aria-hidden="true" tabindex="-1"></a>commercial_df <span class="ot">&lt;-</span> commercial_df <span class="sc">%&gt;%</span></span>
+<span id="cb17-711"><a href="#cb17-711" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb17-712"><a href="#cb17-712" aria-hidden="true" tabindex="-1"></a>    <span class="at">revenue =</span> active_patients <span class="sc">*</span> price_per_month,</span>
+<span id="cb17-713"><a href="#cb17-713" aria-hidden="true" tabindex="-1"></a>    <span class="at">cost =</span> (active_patients <span class="sc">*</span> costprice_per_month) <span class="sc">+</span> (new_patients <span class="sc">*</span> CAC),</span>
+<span id="cb17-714"><a href="#cb17-714" aria-hidden="true" tabindex="-1"></a>    <span class="at">profit =</span> revenue <span class="sc">-</span> cost</span>
+<span id="cb17-715"><a href="#cb17-715" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb17-716"><a href="#cb17-716" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-717"><a href="#cb17-717" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-718"><a href="#cb17-718" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-719"><a href="#cb17-719" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-720"><a href="#cb17-720" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Analysis</span></span>
+<span id="cb17-721"><a href="#cb17-721" aria-hidden="true" tabindex="-1"></a>The commercial analysis quantifies projected market performance of OsteoGuard over key time points. Using the estimated addressable population of 38 million, treatment uptake, and pricing assumptions, this summary focuses on captured patients, revenue, costs, and profit at months 1, 12, 24, 36, 48, and 60.</span>
 <span id="cb17-722"><a href="#cb17-722" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-723"><a href="#cb17-723" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb17-724"><a href="#cb17-724" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-725"><a href="#cb17-725" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Analysis</span></span>
-<span id="cb17-726"><a href="#cb17-726" aria-hidden="true" tabindex="-1"></a>The commercial analysis quantifies projected market performance of OsteoGuard over key time points. Using the estimated addressable population of 38 million, treatment uptake, and pricing assumptions, this summary focuses on captured patients, revenue, costs, and profit at months 1, 12, 24, 36, 48, and 60.</span>
-<span id="cb17-727"><a href="#cb17-727" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-728"><a href="#cb17-728" aria-hidden="true" tabindex="-1"></a>The per-patient monthly economics for OsteoGuard are shown below. Each patient generates approximately $10.49 in revenue per month, with an estimated manufacturing and distribution cost of $1.04, resulting in a monthly profit of $9.45 per patient excluding acquisition costs. These figures highlight the strong unit economics of the therapy, providing a foundation for projecting cumulative revenue and profit as treatment uptake grows.</span>
-<span id="cb17-731"><a href="#cb17-731" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb17-732"><a href="#cb17-732" aria-hidden="true" tabindex="-1"></a><span class="co"># Monthly economics per patient</span></span>
-<span id="cb17-733"><a href="#cb17-733" aria-hidden="true" tabindex="-1"></a><span class="co"># Define per-patient monthly economics</span></span>
-<span id="cb17-734"><a href="#cb17-734" aria-hidden="true" tabindex="-1"></a>per_patient_tbl <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb17-735"><a href="#cb17-735" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Parameter</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Monthly revenue per patient"</span>, </span>
-<span id="cb17-736"><a href="#cb17-736" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Monthly manufacturing/distribution cost per patient"</span>, </span>
-<span id="cb17-737"><a href="#cb17-737" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Monthly profit per patient"</span>),</span>
-<span id="cb17-738"><a href="#cb17-738" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Value ($)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(price_per_month, costprice_per_month, price_per_month <span class="sc">-</span> costprice_per_month)</span>
-<span id="cb17-739"><a href="#cb17-739" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb17-740"><a href="#cb17-740" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-741"><a href="#cb17-741" aria-hidden="true" tabindex="-1"></a><span class="co"># Render the table with kable</span></span>
-<span id="cb17-742"><a href="#cb17-742" aria-hidden="true" tabindex="-1"></a>per_patient_tbl <span class="sc">%&gt;%</span></span>
-<span id="cb17-743"><a href="#cb17-743" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>(</span>
-<span id="cb17-744"><a href="#cb17-744" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Per-Patient Monthly Economics for OsteoGuard"</span>,</span>
-<span id="cb17-745"><a href="#cb17-745" aria-hidden="true" tabindex="-1"></a>    <span class="at">digits =</span> <span class="dv">2</span>,</span>
-<span id="cb17-746"><a href="#cb17-746" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="fu">c</span>(<span class="st">"l"</span>, <span class="st">"r"</span>)</span>
+<span id="cb17-723"><a href="#cb17-723" aria-hidden="true" tabindex="-1"></a>The per-patient monthly economics for OsteoGuard are shown below. Each patient generates approximately $10.49 in revenue per month, with an estimated manufacturing and distribution cost of $1.04, resulting in a monthly profit of $9.45 per patient excluding acquisition costs. These figures highlight the strong unit economics of the therapy, providing a foundation for projecting cumulative revenue and profit as treatment uptake grows.</span>
+<span id="cb17-726"><a href="#cb17-726" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb17-727"><a href="#cb17-727" aria-hidden="true" tabindex="-1"></a><span class="co"># Monthly economics per patient</span></span>
+<span id="cb17-728"><a href="#cb17-728" aria-hidden="true" tabindex="-1"></a><span class="co"># Define per-patient monthly economics</span></span>
+<span id="cb17-729"><a href="#cb17-729" aria-hidden="true" tabindex="-1"></a>per_patient_tbl <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb17-730"><a href="#cb17-730" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Parameter</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Monthly revenue per patient"</span>, </span>
+<span id="cb17-731"><a href="#cb17-731" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Monthly manufacturing/distribution cost per patient"</span>, </span>
+<span id="cb17-732"><a href="#cb17-732" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Monthly profit per patient"</span>),</span>
+<span id="cb17-733"><a href="#cb17-733" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Value ($)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(price_per_month, costprice_per_month, price_per_month <span class="sc">-</span> costprice_per_month)</span>
+<span id="cb17-734"><a href="#cb17-734" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-735"><a href="#cb17-735" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-736"><a href="#cb17-736" aria-hidden="true" tabindex="-1"></a><span class="co"># Render the table with kable</span></span>
+<span id="cb17-737"><a href="#cb17-737" aria-hidden="true" tabindex="-1"></a>per_patient_tbl <span class="sc">%&gt;%</span></span>
+<span id="cb17-738"><a href="#cb17-738" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>(</span>
+<span id="cb17-739"><a href="#cb17-739" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Per-Patient Monthly Economics for OsteoGuard"</span>,</span>
+<span id="cb17-740"><a href="#cb17-740" aria-hidden="true" tabindex="-1"></a>    <span class="at">digits =</span> <span class="dv">2</span>,</span>
+<span id="cb17-741"><a href="#cb17-741" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="fu">c</span>(<span class="st">"l"</span>, <span class="st">"r"</span>)</span>
+<span id="cb17-742"><a href="#cb17-742" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb17-743"><a href="#cb17-743" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(</span>
+<span id="cb17-744"><a href="#cb17-744" aria-hidden="true" tabindex="-1"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb17-745"><a href="#cb17-745" aria-hidden="true" tabindex="-1"></a>    <span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"condensed"</span>, <span class="st">"hover"</span>),</span>
+<span id="cb17-746"><a href="#cb17-746" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="st">"left"</span></span>
 <span id="cb17-747"><a href="#cb17-747" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb17-748"><a href="#cb17-748" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(</span>
-<span id="cb17-749"><a href="#cb17-749" aria-hidden="true" tabindex="-1"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb17-750"><a href="#cb17-750" aria-hidden="true" tabindex="-1"></a>    <span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"condensed"</span>, <span class="st">"hover"</span>),</span>
-<span id="cb17-751"><a href="#cb17-751" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> <span class="st">"left"</span></span>
-<span id="cb17-752"><a href="#cb17-752" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb17-753"><a href="#cb17-753" aria-hidden="true" tabindex="-1"></a>  <span class="fu">row_spec</span>(<span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">background =</span> <span class="st">"#f5f5f5"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb17-754"><a href="#cb17-754" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">1</span>, <span class="at">bold =</span> F, <span class="at">width =</span> <span class="st">"18em"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb17-755"><a href="#cb17-755" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">2</span>, <span class="at">width =</span> <span class="st">"8em"</span>)</span>
-<span id="cb17-756"><a href="#cb17-756" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-757"><a href="#cb17-757" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb17-758"><a href="#cb17-758" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-759"><a href="#cb17-759" aria-hidden="true" tabindex="-1"></a>Using this per patient profit per month and an estimation of Customer Acquisition Cost (CAC) we can calculate the ratio of cost to lifetime value (LTV). The financial summary indicates that with a CAC of $100 and an average treatment duration of 60 months, OsteoGuard generates an LTV of approximately $567 per patient. This produces a strong CAC:LTV ratio (5.67), suggesting that for every dollar spent acquiring a patient, the therapy is projected to return about $5.67 in profit — highlighting solid commercial potential under the current assumptions.</span>
-<span id="cb17-760"><a href="#cb17-760" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-763"><a href="#cb17-763" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb17-764"><a href="#cb17-764" aria-hidden="true" tabindex="-1"></a><span class="co"># CAC:LTV</span></span>
-<span id="cb17-765"><a href="#cb17-765" aria-hidden="true" tabindex="-1"></a><span class="co"># Known values</span></span>
-<span id="cb17-766"><a href="#cb17-766" aria-hidden="true" tabindex="-1"></a>monthly_profit <span class="ot">&lt;-</span> <span class="fl">9.45</span>         <span class="co"># $ per patient</span></span>
-<span id="cb17-767"><a href="#cb17-767" aria-hidden="true" tabindex="-1"></a>avg_treatment_months <span class="ot">&lt;-</span> <span class="dv">60</span>     <span class="co"># 5 years</span></span>
-<span id="cb17-768"><a href="#cb17-768" aria-hidden="true" tabindex="-1"></a>CAC <span class="ot">&lt;-</span> <span class="dv">100</span>                      <span class="co"># assumed per patient acquisition cost</span></span>
-<span id="cb17-769"><a href="#cb17-769" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-770"><a href="#cb17-770" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-771"><a href="#cb17-771" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Lifetime Value</span></span>
-<span id="cb17-772"><a href="#cb17-772" aria-hidden="true" tabindex="-1"></a>LTV <span class="ot">&lt;-</span> monthly_profit <span class="sc">*</span> avg_treatment_months</span>
-<span id="cb17-773"><a href="#cb17-773" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-774"><a href="#cb17-774" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate CAC:LTV ratio</span></span>
-<span id="cb17-775"><a href="#cb17-775" aria-hidden="true" tabindex="-1"></a>CAC_LTV_ratio <span class="ot">&lt;-</span> LTV <span class="sc">/</span> CAC</span>
-<span id="cb17-776"><a href="#cb17-776" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-777"><a href="#cb17-777" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-778"><a href="#cb17-778" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a data frame</span></span>
-<span id="cb17-779"><a href="#cb17-779" aria-hidden="true" tabindex="-1"></a>financial_summary <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb17-780"><a href="#cb17-780" aria-hidden="true" tabindex="-1"></a>  <span class="at">Parameter =</span> <span class="fu">c</span>(<span class="st">"Customer Acquisition Cost (CAC)"</span>,</span>
-<span id="cb17-781"><a href="#cb17-781" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Profit per Patient per Month"</span>,</span>
-<span id="cb17-782"><a href="#cb17-782" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Average Treatment Duration (months)"</span>,</span>
-<span id="cb17-783"><a href="#cb17-783" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Lifetime Value (LTV)"</span>,</span>
-<span id="cb17-784"><a href="#cb17-784" aria-hidden="true" tabindex="-1"></a>                <span class="st">"CAC:LTV Ratio"</span>),</span>
-<span id="cb17-785"><a href="#cb17-785" aria-hidden="true" tabindex="-1"></a>  <span class="at">Value =</span> <span class="fu">c</span>(CAC,</span>
-<span id="cb17-786"><a href="#cb17-786" aria-hidden="true" tabindex="-1"></a>            monthly_profit,</span>
-<span id="cb17-787"><a href="#cb17-787" aria-hidden="true" tabindex="-1"></a>            avg_treatment_months,</span>
-<span id="cb17-788"><a href="#cb17-788" aria-hidden="true" tabindex="-1"></a>            <span class="fu">round</span>(LTV, <span class="dv">2</span>),</span>
-<span id="cb17-789"><a href="#cb17-789" aria-hidden="true" tabindex="-1"></a>            <span class="fu">round</span>(CAC_LTV_ratio, <span class="dv">2</span>))</span>
-<span id="cb17-790"><a href="#cb17-790" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb17-791"><a href="#cb17-791" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-792"><a href="#cb17-792" aria-hidden="true" tabindex="-1"></a><span class="co"># Display as a kable table</span></span>
-<span id="cb17-793"><a href="#cb17-793" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(financial_summary, </span>
-<span id="cb17-794"><a href="#cb17-794" aria-hidden="true" tabindex="-1"></a>      <span class="at">caption =</span> <span class="st">"Financial Summary for OsteoGuard Phase 2 Simulation"</span>,</span>
-<span id="cb17-795"><a href="#cb17-795" aria-hidden="true" tabindex="-1"></a>      <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Metric"</span>, <span class="st">"Value ($)"</span>),</span>
-<span id="cb17-796"><a href="#cb17-796" aria-hidden="true" tabindex="-1"></a>      <span class="at">align =</span> <span class="fu">c</span>(<span class="st">"l"</span>,<span class="st">"r"</span>))</span>
+<span id="cb17-748"><a href="#cb17-748" aria-hidden="true" tabindex="-1"></a>  <span class="fu">row_spec</span>(<span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>, <span class="at">background =</span> <span class="st">"#f5f5f5"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-749"><a href="#cb17-749" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">1</span>, <span class="at">bold =</span> F, <span class="at">width =</span> <span class="st">"18em"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-750"><a href="#cb17-750" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_spec</span>(<span class="dv">2</span>, <span class="at">width =</span> <span class="st">"8em"</span>)</span>
+<span id="cb17-751"><a href="#cb17-751" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-752"><a href="#cb17-752" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-753"><a href="#cb17-753" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-754"><a href="#cb17-754" aria-hidden="true" tabindex="-1"></a>Using this per patient profit per month and an estimation of Customer Acquisition Cost (CAC) we can calculate the ratio of cost to lifetime value (LTV). The financial summary indicates that with a CAC of $100 and an average treatment duration of 60 months, OsteoGuard generates an LTV of approximately $567 per patient. This produces a strong CAC:LTV ratio (5.67), suggesting that for every dollar spent acquiring a patient, the therapy is projected to return about $5.67 in profit — highlighting solid commercial potential under the current assumptions.</span>
+<span id="cb17-755"><a href="#cb17-755" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-758"><a href="#cb17-758" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb17-759"><a href="#cb17-759" aria-hidden="true" tabindex="-1"></a><span class="co"># CAC:LTV</span></span>
+<span id="cb17-760"><a href="#cb17-760" aria-hidden="true" tabindex="-1"></a><span class="co"># Known values</span></span>
+<span id="cb17-761"><a href="#cb17-761" aria-hidden="true" tabindex="-1"></a>monthly_profit <span class="ot">&lt;-</span> <span class="fl">9.45</span>         <span class="co"># $ per patient</span></span>
+<span id="cb17-762"><a href="#cb17-762" aria-hidden="true" tabindex="-1"></a>avg_treatment_months <span class="ot">&lt;-</span> <span class="dv">60</span>     <span class="co"># 5 years</span></span>
+<span id="cb17-763"><a href="#cb17-763" aria-hidden="true" tabindex="-1"></a>CAC <span class="ot">&lt;-</span> <span class="dv">100</span>                      <span class="co"># assumed per patient acquisition cost</span></span>
+<span id="cb17-764"><a href="#cb17-764" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-765"><a href="#cb17-765" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-766"><a href="#cb17-766" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Lifetime Value</span></span>
+<span id="cb17-767"><a href="#cb17-767" aria-hidden="true" tabindex="-1"></a>LTV <span class="ot">&lt;-</span> monthly_profit <span class="sc">*</span> avg_treatment_months</span>
+<span id="cb17-768"><a href="#cb17-768" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-769"><a href="#cb17-769" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate CAC:LTV ratio</span></span>
+<span id="cb17-770"><a href="#cb17-770" aria-hidden="true" tabindex="-1"></a>CAC_LTV_ratio <span class="ot">&lt;-</span> LTV <span class="sc">/</span> CAC</span>
+<span id="cb17-771"><a href="#cb17-771" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-772"><a href="#cb17-772" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-773"><a href="#cb17-773" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a data frame</span></span>
+<span id="cb17-774"><a href="#cb17-774" aria-hidden="true" tabindex="-1"></a>financial_summary <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb17-775"><a href="#cb17-775" aria-hidden="true" tabindex="-1"></a>  <span class="at">Parameter =</span> <span class="fu">c</span>(<span class="st">"Customer Acquisition Cost (CAC)"</span>,</span>
+<span id="cb17-776"><a href="#cb17-776" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Profit per Patient per Month"</span>,</span>
+<span id="cb17-777"><a href="#cb17-777" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Average Treatment Duration (months)"</span>,</span>
+<span id="cb17-778"><a href="#cb17-778" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Lifetime Value (LTV)"</span>,</span>
+<span id="cb17-779"><a href="#cb17-779" aria-hidden="true" tabindex="-1"></a>                <span class="st">"CAC:LTV Ratio"</span>),</span>
+<span id="cb17-780"><a href="#cb17-780" aria-hidden="true" tabindex="-1"></a>  <span class="at">Value =</span> <span class="fu">c</span>(CAC,</span>
+<span id="cb17-781"><a href="#cb17-781" aria-hidden="true" tabindex="-1"></a>            monthly_profit,</span>
+<span id="cb17-782"><a href="#cb17-782" aria-hidden="true" tabindex="-1"></a>            avg_treatment_months,</span>
+<span id="cb17-783"><a href="#cb17-783" aria-hidden="true" tabindex="-1"></a>            <span class="fu">round</span>(LTV, <span class="dv">2</span>),</span>
+<span id="cb17-784"><a href="#cb17-784" aria-hidden="true" tabindex="-1"></a>            <span class="fu">round</span>(CAC_LTV_ratio, <span class="dv">2</span>))</span>
+<span id="cb17-785"><a href="#cb17-785" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-786"><a href="#cb17-786" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-787"><a href="#cb17-787" aria-hidden="true" tabindex="-1"></a><span class="co"># Display as a kable table</span></span>
+<span id="cb17-788"><a href="#cb17-788" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(financial_summary, </span>
+<span id="cb17-789"><a href="#cb17-789" aria-hidden="true" tabindex="-1"></a>      <span class="at">caption =</span> <span class="st">"Financial Summary for OsteoGuard Phase 2 Simulation"</span>,</span>
+<span id="cb17-790"><a href="#cb17-790" aria-hidden="true" tabindex="-1"></a>      <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Metric"</span>, <span class="st">"Value ($)"</span>),</span>
+<span id="cb17-791"><a href="#cb17-791" aria-hidden="true" tabindex="-1"></a>      <span class="at">align =</span> <span class="fu">c</span>(<span class="st">"l"</span>,<span class="st">"r"</span>))</span>
+<span id="cb17-792"><a href="#cb17-792" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-793"><a href="#cb17-793" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-794"><a href="#cb17-794" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-795"><a href="#cb17-795" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-796"><a href="#cb17-796" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-797"><a href="#cb17-797" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-798"><a href="#cb17-798" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-799"><a href="#cb17-799" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb17-800"><a href="#cb17-800" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-801"><a href="#cb17-801" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-802"><a href="#cb17-802" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-803"><a href="#cb17-803" aria-hidden="true" tabindex="-1"></a>This table presents the projected commercial performance of the new bisphosphonate therapy over a 5-year horizon at selected key months (1, 12, 24, 36, 48, 60). </span>
-<span id="cb17-804"><a href="#cb17-804" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-805"><a href="#cb17-805" aria-hidden="true" tabindex="-1"></a> At the start of the simulation, the active patient population is approximately 24,877, generating $260,957 in monthly revenue, though total costs of $825,110 result in an initial loss of $564,152. </span>
-<span id="cb17-806"><a href="#cb17-806" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb17-807"><a href="#cb17-807" aria-hidden="true" tabindex="-1"></a> By the end of the first year (month 12), active patients grow to 111,691, with revenue reaching $1.17 million and losses reduced to just $79,039. </span>
-<span id="cb17-808"><a href="#cb17-808" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb17-809"><a href="#cb17-809" aria-hidden="true" tabindex="-1"></a> Over the subsequent years, continued patient uptake and retention drive revenue and profit growth, with 213,899 active patients by month 24, producing $2.24 million in revenue and $544,627 in profit. </span>
-<span id="cb17-810"><a href="#cb17-810" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb17-811"><a href="#cb17-811" aria-hidden="true" tabindex="-1"></a> By month 36, the patient base reaches 313,361, revenue rises to $3.29 million, and profit exceeds $1.26 million. At month 48, 396,353 patients are actively treated, generating $4.16 million in revenue and $1.97 million in profit, and by the end of year five (month 60), the therapy supports 454,632 active patients, $4.77 million in revenue, and $2.56 million in profit. </span>
-<span id="cb17-812"><a href="#cb17-812" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb17-813"><a href="#cb17-813" aria-hidden="true" tabindex="-1"></a>The simulation illustrates a realistic adoption curve, where initial losses from customer acquisition costs are offset by steady growth in active patients and revenue, with profitability achieved during the second year and sustained thereafter, highlighting the economic potential of expanding treatment to previously under-identified high-risk adults.</span>
-<span id="cb17-814"><a href="#cb17-814" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-817"><a href="#cb17-817" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb17-818"><a href="#cb17-818" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary table</span></span>
-<span id="cb17-819"><a href="#cb17-819" aria-hidden="true" tabindex="-1"></a>summary_table <span class="ot">&lt;-</span> commercial_df <span class="sc">%&gt;%</span></span>
-<span id="cb17-820"><a href="#cb17-820" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">12</span>, <span class="dv">24</span>, <span class="dv">36</span>, <span class="dv">48</span>, <span class="dv">60</span>)) <span class="sc">%&gt;%</span>  <span class="co"># select key months</span></span>
-<span id="cb17-821"><a href="#cb17-821" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
-<span id="cb17-822"><a href="#cb17-822" aria-hidden="true" tabindex="-1"></a>    <span class="at">Month =</span> month,</span>
-<span id="cb17-823"><a href="#cb17-823" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Active Patients</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(active_patients),</span>
-<span id="cb17-824"><a href="#cb17-824" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Revenue ($)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(revenue, <span class="dv">1</span>),</span>
-<span id="cb17-825"><a href="#cb17-825" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Cost ($)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(cost, <span class="dv">1</span>),</span>
-<span id="cb17-826"><a href="#cb17-826" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Profit ($)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(profit, <span class="dv">1</span>)</span>
-<span id="cb17-827"><a href="#cb17-827" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb17-828"><a href="#cb17-828" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>(<span class="at">caption =</span> <span class="st">"Commercial Summary at Key Months"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb17-829"><a href="#cb17-829" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"condensed"</span>, <span class="st">"hover"</span>))</span>
-<span id="cb17-830"><a href="#cb17-830" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-831"><a href="#cb17-831" aria-hidden="true" tabindex="-1"></a>summary_table</span>
-<span id="cb17-832"><a href="#cb17-832" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-833"><a href="#cb17-833" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb17-834"><a href="#cb17-834" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-835"><a href="#cb17-835" aria-hidden="true" tabindex="-1"></a>Building on the per-patient and aggregated financial summaries, the below figure illustrates the projected financial performance of the new bisphosphonate therapy over a 5-year (60-month) horizon.</span>
-<span id="cb17-836"><a href="#cb17-836" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-837"><a href="#cb17-837" aria-hidden="true" tabindex="-1"></a>Revenue (dark purple line) steadily increases as the patient base grows, reaching nearly $5 million by month 60.</span>
-<span id="cb17-838"><a href="#cb17-838" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-839"><a href="#cb17-839" aria-hidden="true" tabindex="-1"></a>Costs (lighter purple line) rise initially due to both manufacturing expenses and one-time customer acquisition costs (CAC), then plateau around $2.2 million as new patient starts slow and the active patient pool stabilizes.</span>
-<span id="cb17-840"><a href="#cb17-840" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-841"><a href="#cb17-841" aria-hidden="true" tabindex="-1"></a>Profit (medium purple line) starts negative due to upfront CAC investments but steadily improves, crossing into profitability between months 20 and 25. By year 5, projected profit approaches $2.5 million.</span>
-<span id="cb17-842"><a href="#cb17-842" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-843"><a href="#cb17-843" aria-hidden="true" tabindex="-1"></a>The model reflects realistic commercial dynamics: early losses driven by onboarding costs, gradual patient uptake, and treatment persistence leading to sustained revenue growth. The cost plateau demonstrates diminishing acquisition expenses as market saturation approaches. Overall, the therapy achieves profitability within approximately two years, with strong profit growth through year five, supporting a compelling economic case for expanding osteoporosis treatment to previously under-identified missed high-risk populations.</span>
-<span id="cb17-844"><a href="#cb17-844" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-847"><a href="#cb17-847" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb17-848"><a href="#cb17-848" aria-hidden="true" tabindex="-1"></a><span class="co"># Time-series figure:revenue, cost, and profit</span></span>
-<span id="cb17-849"><a href="#cb17-849" aria-hidden="true" tabindex="-1"></a>financial_plot <span class="ot">&lt;-</span> commercial_df <span class="sc">%&gt;%</span></span>
-<span id="cb17-850"><a href="#cb17-850" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(revenue, cost, profit), <span class="at">names_to =</span> <span class="st">"Metric"</span>, <span class="at">values_to =</span> <span class="st">"Value"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb17-851"><a href="#cb17-851" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> month, <span class="at">y =</span> Value, <span class="at">color =</span> Metric)) <span class="sc">+</span>  </span>
-<span id="cb17-852"><a href="#cb17-852" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
-<span id="cb17-853"><a href="#cb17-853" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"revenue"</span> <span class="ot">=</span> <span class="st">"#4A0072"</span>, <span class="st">"cost"</span> <span class="ot">=</span> <span class="st">"#9A4EAE"</span>, <span class="st">"profit"</span> <span class="ot">=</span> <span class="st">"purple"</span>)) <span class="sc">+</span></span>
-<span id="cb17-854"><a href="#cb17-854" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> comma) <span class="sc">+</span>  <span class="co"># format with commas</span></span>
-<span id="cb17-855"><a href="#cb17-855" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb17-856"><a href="#cb17-856" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Revenue, Cost, and Profit Over Time"</span>,</span>
-<span id="cb17-857"><a href="#cb17-857" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Month"</span>,</span>
-<span id="cb17-858"><a href="#cb17-858" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"USD ($)"</span>,</span>
-<span id="cb17-859"><a href="#cb17-859" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Metric"</span></span>
-<span id="cb17-860"><a href="#cb17-860" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb17-861"><a href="#cb17-861" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>)</span>
+<span id="cb17-798"><a href="#cb17-798" aria-hidden="true" tabindex="-1"></a>This table presents the projected commercial performance of the new bisphosphonate therapy over a 5-year horizon at selected key months (1, 12, 24, 36, 48, 60). </span>
+<span id="cb17-799"><a href="#cb17-799" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-800"><a href="#cb17-800" aria-hidden="true" tabindex="-1"></a> At the start of the simulation, the active patient population is approximately 24,877, generating $260,957 in monthly revenue, though total costs of $825,110 result in an initial loss of $564,152. </span>
+<span id="cb17-801"><a href="#cb17-801" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb17-802"><a href="#cb17-802" aria-hidden="true" tabindex="-1"></a> By the end of the first year (month 12), active patients grow to 111,691, with revenue reaching $1.17 million and losses reduced to just $79,039. </span>
+<span id="cb17-803"><a href="#cb17-803" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb17-804"><a href="#cb17-804" aria-hidden="true" tabindex="-1"></a> Over the subsequent years, continued patient uptake and retention drive revenue and profit growth, with 213,899 active patients by month 24, producing $2.24 million in revenue and $544,627 in profit. </span>
+<span id="cb17-805"><a href="#cb17-805" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb17-806"><a href="#cb17-806" aria-hidden="true" tabindex="-1"></a> By month 36, the patient base reaches 313,361, revenue rises to $3.29 million, and profit exceeds $1.26 million. At month 48, 396,353 patients are actively treated, generating $4.16 million in revenue and $1.97 million in profit, and by the end of year five (month 60), the therapy supports 454,632 active patients, $4.77 million in revenue, and $2.56 million in profit. </span>
+<span id="cb17-807"><a href="#cb17-807" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb17-808"><a href="#cb17-808" aria-hidden="true" tabindex="-1"></a>The simulation illustrates a realistic adoption curve, where initial losses from customer acquisition costs are offset by steady growth in active patients and revenue, with profitability achieved during the second year and sustained thereafter, highlighting the economic potential of expanding treatment to previously under-identified high-risk adults.</span>
+<span id="cb17-809"><a href="#cb17-809" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-812"><a href="#cb17-812" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb17-813"><a href="#cb17-813" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary table</span></span>
+<span id="cb17-814"><a href="#cb17-814" aria-hidden="true" tabindex="-1"></a>summary_table <span class="ot">&lt;-</span> commercial_df <span class="sc">%&gt;%</span></span>
+<span id="cb17-815"><a href="#cb17-815" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(month <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">12</span>, <span class="dv">24</span>, <span class="dv">36</span>, <span class="dv">48</span>, <span class="dv">60</span>)) <span class="sc">%&gt;%</span>  <span class="co"># select key months</span></span>
+<span id="cb17-816"><a href="#cb17-816" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(</span>
+<span id="cb17-817"><a href="#cb17-817" aria-hidden="true" tabindex="-1"></a>    <span class="at">Month =</span> month,</span>
+<span id="cb17-818"><a href="#cb17-818" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Active Patients</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(active_patients),</span>
+<span id="cb17-819"><a href="#cb17-819" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Revenue ($)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(revenue, <span class="dv">1</span>),</span>
+<span id="cb17-820"><a href="#cb17-820" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Cost ($)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(cost, <span class="dv">1</span>),</span>
+<span id="cb17-821"><a href="#cb17-821" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Profit ($)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(profit, <span class="dv">1</span>)</span>
+<span id="cb17-822"><a href="#cb17-822" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb17-823"><a href="#cb17-823" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>(<span class="at">caption =</span> <span class="st">"Commercial Summary at Key Months"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-824"><a href="#cb17-824" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"condensed"</span>, <span class="st">"hover"</span>))</span>
+<span id="cb17-825"><a href="#cb17-825" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-826"><a href="#cb17-826" aria-hidden="true" tabindex="-1"></a>summary_table</span>
+<span id="cb17-827"><a href="#cb17-827" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-828"><a href="#cb17-828" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-829"><a href="#cb17-829" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-830"><a href="#cb17-830" aria-hidden="true" tabindex="-1"></a>Building on the per-patient and aggregated financial summaries, the below figure illustrates the projected financial performance of the new bisphosphonate therapy over a 5-year (60-month) horizon.</span>
+<span id="cb17-831"><a href="#cb17-831" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-832"><a href="#cb17-832" aria-hidden="true" tabindex="-1"></a>Revenue (dark purple line) steadily increases as the patient base grows, reaching nearly $5 million by month 60.</span>
+<span id="cb17-833"><a href="#cb17-833" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-834"><a href="#cb17-834" aria-hidden="true" tabindex="-1"></a>Costs (lighter purple line) rise initially due to both manufacturing expenses and one-time customer acquisition costs (CAC), then plateau around $2.2 million as new patient starts slow and the active patient pool stabilizes.</span>
+<span id="cb17-835"><a href="#cb17-835" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-836"><a href="#cb17-836" aria-hidden="true" tabindex="-1"></a>Profit (medium purple line) starts negative due to upfront CAC investments but steadily improves, crossing into profitability between months 20 and 25. By year 5, projected profit approaches $2.5 million.</span>
+<span id="cb17-837"><a href="#cb17-837" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-838"><a href="#cb17-838" aria-hidden="true" tabindex="-1"></a>The model reflects realistic commercial dynamics: early losses driven by onboarding costs, gradual patient uptake, and treatment persistence leading to sustained revenue growth. The cost plateau demonstrates diminishing acquisition expenses as market saturation approaches. Overall, the therapy achieves profitability within approximately two years, with strong profit growth through year five, supporting a compelling economic case for expanding osteoporosis treatment to previously under-identified missed high-risk populations.</span>
+<span id="cb17-839"><a href="#cb17-839" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-842"><a href="#cb17-842" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb17-843"><a href="#cb17-843" aria-hidden="true" tabindex="-1"></a><span class="co"># Time-series figure:revenue, cost, and profit</span></span>
+<span id="cb17-844"><a href="#cb17-844" aria-hidden="true" tabindex="-1"></a>financial_plot <span class="ot">&lt;-</span> commercial_df <span class="sc">%&gt;%</span></span>
+<span id="cb17-845"><a href="#cb17-845" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(revenue, cost, profit), <span class="at">names_to =</span> <span class="st">"Metric"</span>, <span class="at">values_to =</span> <span class="st">"Value"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-846"><a href="#cb17-846" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> month, <span class="at">y =</span> Value, <span class="at">color =</span> Metric)) <span class="sc">+</span>  </span>
+<span id="cb17-847"><a href="#cb17-847" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb17-848"><a href="#cb17-848" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"revenue"</span> <span class="ot">=</span> <span class="st">"#4A0072"</span>, <span class="st">"cost"</span> <span class="ot">=</span> <span class="st">"#9A4EAE"</span>, <span class="st">"profit"</span> <span class="ot">=</span> <span class="st">"purple"</span>)) <span class="sc">+</span></span>
+<span id="cb17-849"><a href="#cb17-849" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> comma) <span class="sc">+</span>  <span class="co"># format with commas</span></span>
+<span id="cb17-850"><a href="#cb17-850" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb17-851"><a href="#cb17-851" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Revenue, Cost, and Profit Over Time"</span>,</span>
+<span id="cb17-852"><a href="#cb17-852" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Month"</span>,</span>
+<span id="cb17-853"><a href="#cb17-853" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"USD ($)"</span>,</span>
+<span id="cb17-854"><a href="#cb17-854" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Metric"</span></span>
+<span id="cb17-855"><a href="#cb17-855" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb17-856"><a href="#cb17-856" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>)</span>
+<span id="cb17-857"><a href="#cb17-857" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-858"><a href="#cb17-858" aria-hidden="true" tabindex="-1"></a>financial_plot</span>
+<span id="cb17-859"><a href="#cb17-859" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-860"><a href="#cb17-860" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-861"><a href="#cb17-861" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-862"><a href="#cb17-862" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-863"><a href="#cb17-863" aria-hidden="true" tabindex="-1"></a>financial_plot</span>
+<span id="cb17-863"><a href="#cb17-863" aria-hidden="true" tabindex="-1"></a><span class="fu">### Conclusion</span></span>
 <span id="cb17-864"><a href="#cb17-864" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-865"><a href="#cb17-865" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-865"><a href="#cb17-865" aria-hidden="true" tabindex="-1"></a>The Phase 2 simulations clearly demonstrate that earlier identification of high-risk patients through improved screening, combined with timely initiation of OsteoGuard therapy, can meaningfully prevent fractures and slow the progression of osteoporosis. In our simulated cohort, patients receiving treatment showed up to a **5.4% increase in lumbar spine BMD over 24 months**, compared with a **1.6% gain or slight decline in low-adherence and control groups**, respectively. Even partial adherence or early discontinuation conferred measurable benefit, highlighting the clinical value of targeting treatment to the right population.</span>
 <span id="cb17-866"><a href="#cb17-866" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-867"><a href="#cb17-867" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-868"><a href="#cb17-868" aria-hidden="true" tabindex="-1"></a><span class="fu">### Conclusion</span></span>
+<span id="cb17-867"><a href="#cb17-867" aria-hidden="true" tabindex="-1"></a>From a commercial perspective, this represents a **substantial market opportunity**. By expanding screening and driving uptake among eligible patients, OsteoGuard could capture a growing share of the addressable population, generating significant revenue and profit per patient while delivering tangible health benefits. Running an aggressive early-screening campaign, including physician outreach, patient education, and targeted risk-assessment programs, could accelerate identification of missed high-risk adults and maximize therapy adoption. Such initiatives would help reach the untapped portion of the market, ensuring that high-risk individuals who would otherwise remain undetected have the opportunity to benefit from treatment. The simulations underscore that therapies with preventative potential—when combined with strategic patient identification and proactive outreach—can both improve outcomes and unlock meaningful commercial value, establishing a compelling case for investment in screening programs, adherence support, and market rollout strategies.</span>
+<span id="cb17-868"><a href="#cb17-868" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-869"><a href="#cb17-869" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-870"><a href="#cb17-870" aria-hidden="true" tabindex="-1"></a>The Phase 2 simulations clearly demonstrate that earlier identification of high-risk patients through improved screening, combined with timely initiation of OsteoGuard therapy, can meaningfully prevent fractures and slow the progression of osteoporosis. In our simulated cohort, patients receiving treatment showed up to a **5.4% increase in lumbar spine BMD over 24 months**, compared with a **1.6% gain or slight decline in low-adherence and control groups**, respectively. Even partial adherence or early discontinuation conferred measurable benefit, highlighting the clinical value of targeting treatment to the right population.</span>
-<span id="cb17-871"><a href="#cb17-871" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-872"><a href="#cb17-872" aria-hidden="true" tabindex="-1"></a>From a commercial perspective, this represents a **substantial market opportunity**. By expanding screening and driving uptake among eligible patients, OsteoGuard could capture a growing share of the addressable population, generating significant revenue and profit per patient while delivering tangible health benefits. Running an aggressive early-screening campaign, including physician outreach, patient education, and targeted risk-assessment programs, could accelerate identification of missed high-risk adults and maximize therapy adoption. Such initiatives would help reach the untapped portion of the market, ensuring that high-risk individuals who would otherwise remain undetected have the opportunity to benefit from treatment. The simulations underscore that therapies with preventative potential—when combined with strategic patient identification and proactive outreach—can both improve outcomes and unlock meaningful commercial value, establishing a compelling case for investment in screening programs, adherence support, and market rollout strategies.</span>
-<span id="cb17-873"><a href="#cb17-873" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-870"><a href="#cb17-870" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-871"><a href="#cb17-871" aria-hidden="true" tabindex="-1"></a><span class="fu">### References</span></span>
+<span id="cb17-872"><a href="#cb17-872" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-873"><a href="#cb17-873" aria-hidden="true" tabindex="-1"></a>Alendronate Prices, Coupons, Copay &amp; Patient Assistance. Drugs.com, www.drugs.com/price-guide/alendronate.</span>
 <span id="cb17-874"><a href="#cb17-874" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-875"><a href="#cb17-875" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-876"><a href="#cb17-876" aria-hidden="true" tabindex="-1"></a><span class="fu">### References</span></span>
-<span id="cb17-877"><a href="#cb17-877" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-878"><a href="#cb17-878" aria-hidden="true" tabindex="-1"></a>Alendronate Prices, Coupons, Copay &amp; Patient Assistance. Drugs.com, www.drugs.com/price-guide/alendronate.</span>
-<span id="cb17-879"><a href="#cb17-879" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-880"><a href="#cb17-880" aria-hidden="true" tabindex="-1"></a>“Bisphosphonates <span class="sc">\|</span> International Osteoporosis Foundation.” www.osteoporosis.foundation, www.osteoporosis.foundation/health-professionals/treatment/bisphosphonates.</span>
-<span id="cb17-881"><a href="#cb17-881" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-882"><a href="#cb17-882" aria-hidden="true" tabindex="-1"></a>Fatoye, F., Smith, P., Gebrye, T., &amp; Yeowell, G. (2019). Real-world persistence and adherence with oral bisphosphonates for osteoporosis: a systematic review. BMJ Open, 9(4), e027049. https://doi.org/10.1136/bmjopen-2018-027049</span>
-<span id="cb17-883"><a href="#cb17-883" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-884"><a href="#cb17-884" aria-hidden="true" tabindex="-1"></a>Haderslev, K. V., Tjellesen, L., Sorensen, H. A., &amp; Staun, M. (2000). Alendronate increases lumbar spine bone mineral density in patients with Crohn's disease. Gastroenterology, 119(3), 639–646. https://doi.org/10.1053/gast.2000.16518</span>
-<span id="cb17-885"><a href="#cb17-885" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-886"><a href="#cb17-886" aria-hidden="true" tabindex="-1"></a>Hui, R. L., Adams, A. L., Niu, F., Ettinger, B., Yi, D. K., Chandra, M., &amp; Lo, J. C. (2017). Predicting Adherence and Persistence with Oral Bisphosphonate Therapy in an Integrated Health Care Delivery System. Journal of Managed Care &amp; Specialty Pharmacy, 23(4), 503–512. https://doi.org/10.18553/jmcp.2017.23.4.503</span>
-<span id="cb17-887"><a href="#cb17-887" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-888"><a href="#cb17-888" aria-hidden="true" tabindex="-1"></a>Karpf, D. B., Shapiro, D. R., Seeman, E., Ensrud, K. E., Johnston, C. C., Jr, Adami, S., Harris, S. T., Santora, A. C., 2nd, Hirsch, L. J., Oppenheimer, L., &amp; Thompson, D. (1997). Prevention of nonvertebral fractures by alendronate. A meta-analysis. Alendronate Osteoporosis Treatment Study Groups. JAMA, 277(14), 1159–1164.</span>
-<span id="cb17-889"><a href="#cb17-889" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-890"><a href="#cb17-890" aria-hidden="true" tabindex="-1"></a>Pharmaceutical drug prices and trends for ALENDRONATE SODIUM. (2026). Deep Knowledge on Small-Molecule Drugs and the Global Patents Covering Them. https://www.drugpatentwatch.com/p/drug-price/drugname/ALENDRONATE%2BSODIUM)</span>
-<span id="cb17-891"><a href="#cb17-891" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-892"><a href="#cb17-892" aria-hidden="true" tabindex="-1"></a>“Popular Bisphosphonates List, Drug Prices and Medication Information.” GoodRx, 2024, www.goodrx.com/classes/bisphosphonates.</span>
-<span id="cb17-893"><a href="#cb17-893" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-875"><a href="#cb17-875" aria-hidden="true" tabindex="-1"></a>“Bisphosphonates <span class="sc">\|</span> International Osteoporosis Foundation.” www.osteoporosis.foundation, www.osteoporosis.foundation/health-professionals/treatment/bisphosphonates.</span>
+<span id="cb17-876"><a href="#cb17-876" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-877"><a href="#cb17-877" aria-hidden="true" tabindex="-1"></a>Fatoye, F., Smith, P., Gebrye, T., &amp; Yeowell, G. (2019). Real-world persistence and adherence with oral bisphosphonates for osteoporosis: a systematic review. BMJ Open, 9(4), e027049. https://doi.org/10.1136/bmjopen-2018-027049</span>
+<span id="cb17-878"><a href="#cb17-878" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-879"><a href="#cb17-879" aria-hidden="true" tabindex="-1"></a>Haderslev, K. V., Tjellesen, L., Sorensen, H. A., &amp; Staun, M. (2000). Alendronate increases lumbar spine bone mineral density in patients with Crohn's disease. Gastroenterology, 119(3), 639–646. https://doi.org/10.1053/gast.2000.16518</span>
+<span id="cb17-880"><a href="#cb17-880" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-881"><a href="#cb17-881" aria-hidden="true" tabindex="-1"></a>Hui, R. L., Adams, A. L., Niu, F., Ettinger, B., Yi, D. K., Chandra, M., &amp; Lo, J. C. (2017). Predicting Adherence and Persistence with Oral Bisphosphonate Therapy in an Integrated Health Care Delivery System. Journal of Managed Care &amp; Specialty Pharmacy, 23(4), 503–512. https://doi.org/10.18553/jmcp.2017.23.4.503</span>
+<span id="cb17-882"><a href="#cb17-882" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-883"><a href="#cb17-883" aria-hidden="true" tabindex="-1"></a>Karpf, D. B., Shapiro, D. R., Seeman, E., Ensrud, K. E., Johnston, C. C., Jr, Adami, S., Harris, S. T., Santora, A. C., 2nd, Hirsch, L. J., Oppenheimer, L., &amp; Thompson, D. (1997). Prevention of nonvertebral fractures by alendronate. A meta-analysis. Alendronate Osteoporosis Treatment Study Groups. JAMA, 277(14), 1159–1164.</span>
+<span id="cb17-884"><a href="#cb17-884" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-885"><a href="#cb17-885" aria-hidden="true" tabindex="-1"></a>Pharmaceutical drug prices and trends for ALENDRONATE SODIUM. (2026). Deep Knowledge on Small-Molecule Drugs and the Global Patents Covering Them. https://www.drugpatentwatch.com/p/drug-price/drugname/ALENDRONATE%2BSODIUM)</span>
+<span id="cb17-886"><a href="#cb17-886" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-887"><a href="#cb17-887" aria-hidden="true" tabindex="-1"></a>“Popular Bisphosphonates List, Drug Prices and Medication Information.” GoodRx, 2024, www.goodrx.com/classes/bisphosphonates.</span>
+<span id="cb17-888"><a href="#cb17-888" aria-hidden="true" tabindex="-1"></a></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
