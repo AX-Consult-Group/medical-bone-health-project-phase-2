@@ -19,7 +19,7 @@ format:
 
 ```{r}
 library(pacman)
-p_load(magrittr, tidyverse, psych, dplyr, ggplot2, haven, janitor, readxl, writexl, knitr, kableExtra, scales, tibble, tidyr, patchwork, ggrepel, zoo)
+p_load(magrittr, tidyverse, psych, dplyr, ggplot2, haven, janitor, readxl, writexl, knitr, kableExtra, scales, tibble, tidyr, patchwork, ggrepel)
 ```
 
 ### Background
@@ -591,14 +591,9 @@ commercial_assumptions_tbl <- tribble(
   "Reflects real-world oral bisphosphonate discontinuation (~70% annual retention).",
   
   "Annual growth in market penetration",
-  "Approx. 5% per year (logistic ramp)",
+  "logistic ramp",
   "Modeled assumption",
   "Aligns with typical treatment adoption curves; incorporates finite pool constraints.",
-  
-  "Market penetration plateau",
-  "50% of eligible patients",
-  "Modeled assumption",
-  "Consistent with observed maximum penetration for osteoporosis treatments in the US; prevents unrealistic over-adoption.",
   
   "Customer Acquisition Cost (CAC)", 
   "$100",
